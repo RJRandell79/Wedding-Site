@@ -1,0 +1,46 @@
+/* Stylesheet for direction panel */
+.adp {
+  margin-bottom: 30px; }
+  .adp table {
+    width: 100%;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #333; }
+
+.adp-legal {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #333; }
+
+.adp-placemark {
+  font-weight: 700;
+  border: none;
+  background: #f7a9b3; }
+
+img.adp-marker {
+  width: 30px;
+  height: auto;
+  padding: 5px 10px 5px 5px; }
+
+.adp-summary {
+  padding: 0 0 6px; }
+  .adp-summary span {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-weight: 700; }
+
+.adp-substep, .adp-text {
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 5px 3px; }
+
+.adp-distance {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.adp-substep {
+  border-top: 1px solid #f7a9b3; }
+  .adp-substep b {
+    font-weight: 700; }
+
+/*# sourceMappingURL=directions.css.map */

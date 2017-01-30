@@ -1,0 +1,54 @@
+/* Stylesheet for direction panel */
+
+@import 'partials/mixins';
+
+.adp {
+    margin-bottom: 30px;
+    table {
+        width: 100%;
+        font-family: $open-sans;
+        font-weight: 400;
+        color: #333;
+    }
+}
+
+
+.adp-legal {
+    @include font-size( 12 );
+    color: #333;
+}
+
+.adp-placemark {
+    font-weight: $bold;
+    border: none;
+    background: $secondarylgt15;
+}
+
+img.adp-marker {
+    width: 30px;
+    height: auto;
+    padding: 5px 10px 5px 5px;
+}
+
+.adp-summary {
+    span {
+        @include font-size( 21 );
+        font-weight: $bold;
+    }
+    padding: 0 0 6px;
+}
+
+.adp-substep, .adp-text {
+    @include font-size( 16 );
+    padding: 5px 3px;
+}
+.adp-distance {
+    @include font-size( 16 );
+}
+
+.adp-substep {
+    border-top: 1px solid $secondarylgt15;
+    b {
+        font-weight: $bold;
+    }
+}

@@ -1,0 +1,100 @@
+// Spinning Icons
+// --------------------------
+
+.#{$fa-css-prefix}-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+}
+
+.#{$fa-css-prefix}-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+            animation: fa-spin 1s infinite steps(8);
+}
+
+.#{$fa-css-prefix}-pulsedown {
+    -webkit-animation: fa-pulsedown 1s infinite;
+            animation: fa-pulsedown 1s infinite;
+}
+
+.#{$fa-css-prefix}-heartbeating {
+    -webkit-animaton: fa-heartbeat 3s infinite;
+           animation: fa-heartbeat 3s infinite;
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes fa-pulsedown {
+    0% {
+        -webkit-transform: translate( 0, 0 );
+                transform: translate( 0, 0 );
+    }
+    100% {
+        -webkit-transform: translate( 0, 5 );
+                transform: translate( 0, 5 );
+    }
+}
+
+@keyframes fa-pulsedown {
+    0% {
+        -webkit-transform: translateY( 0 );
+                transform: translateY( 0 );
+    }
+    90% {
+        -webkit-transform: translateY( 5px );
+                transform: translateY( 5px );
+    }
+    100% {
+        -webkit-transform: translateY( 0 );
+                transform: translateY( 0 );
+    }
+}
+
+@-webkit-keyframes fa-heartbeat {
+    0% {
+        -webkit-transform: scale( 1, 1 );
+                transform: scale( 1, 1 );
+    }
+    50% {
+        -webkit-transform: scale( 1.2, 1.2 );
+                transform: scale( 1.2, 1.2 );
+    }
+    100% {
+        -webkit-transform: scale( 1, 1 );
+                transform: scale( 1, 1 );
+    }
+}
+
+@keyframes fa-heartbeat {
+    0% {
+        -webkit-transform: scale( 1, 1 );
+                transform: scale( 1, 1 );
+    }
+    50% {
+        -webkit-transform: scale( 1.2, 1.2 );
+                transform: scale( 1.2, 1.2 );
+    }
+    100% {
+        -webkit-transform: scale( 1, 1 );
+                transform: scale( 1, 1 );
+    }
+}

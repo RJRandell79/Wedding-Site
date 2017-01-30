@@ -1,0 +1,1082 @@
+/**
+* CH01 - Resets, Imports & Mixins
+* CH02 - Typography
+* CH03 - Page Structure
+* CH04 - Header & Navigation
+* CH05 - Content & Media
+* CH06 - Footer
+* CH07 - Miscellaneous
+* CH08 - Responsive Breakpoints
+**/
+
+/* -- CH01 - Resets & Mixins -- */
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'bootstrap';
+@import 'font-awesome';
+
+/* -- CH02 - Typography -- */
+
+/*
+@font-face {
+	font-family: 'EffraHeavy';
+	src:	url( '../fonts/effra-heavy/effra-heavy.eot' );
+	src: 	url( '../fonts/effra-heavy/effra-heavy.eot' ) format( 'embedded-opentype' ),
+			url( '../fonts/effra-heavy/effra-heavy.woff' ) format( 'woff' ),
+			url( '../fonts/effra-heavy/effra-heavy.ttf' ) format( 'truetype' ),
+			url( '../fonts/effra-heavy/effra-heavy.svg' ) format( 'svg' );
+}
+
+*/
+
+body {
+    @include font-size( 16 );
+    @include breakpoint( small ) {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+/* -- CH03 - Page Structure -- */
+
+
+/* -- CH04 - Header & Navigation -- */
+
+header {
+    .header-images {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .logo {
+            width: 450px;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            margin-left: -225px;
+        }
+        .scroll-down {
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -50px;
+            a {
+                display: block;
+                text-decoration: none;
+                p, i {
+                    width: 100%;
+                    margin: 0;
+                    @include font-size( 15 );
+                    color: $white;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-shadow: 0 2px 4px rgba( 0, 0, 100, 0.25 );
+                }
+                i {
+                    @include font-size( 16 );
+                    transition-timing-function: ease-out;
+                }
+            }
+
+        }
+    }
+
+    nav {
+        width: 100%;
+        height: 40px;
+        background: $white;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba( 0, 0, 200, 0.15 );
+        transition: all 1s ease-out;
+        ul {
+            display: inline-block;
+            margin: 0 auto;
+            line-height: 38px;
+            li {
+                float: left;
+                margin-right: 5px;
+                a {
+                    @include font-size( 18 );
+                    font-weight: $bold;
+                    color: $black;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                span {
+                    color: $secondarylgt15;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.fixtop {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+    }
+} // header
+
+/* -- CH05 - Content & Media  -- */
+
+article {
+    .headings {
+        text-align: center;
+        h2 {
+            @include font-size( 56 );
+            font-family: $tangerine;
+            color: $secondary;
+        }
+        p {
+            width: 80%;
+            margin: 0 auto 30px;
+            @include font-size( 21 );
+            line-height: 2rem;
+        }
+        ul {
+            display: inline-block;
+            li {
+                float: left;
+                i {
+                    width: 20px;
+                    color: $secondary;
+                }
+                &:first-of-type, &:last-of-type {
+                    i {
+                        @include font-size( 10 );
+                        color: $secondarylgt15;
+                    }
+                }
+                &:first-of-type {
+                    i {
+                        text-align: right;
+                    }
+                }
+                &:last-of-type {
+                    i {
+                        text-align: left;
+                    }
+                }
+                &:nth-child( even ) {
+                    i {
+                        @include font-size( 16 );
+                        color: $secondarylgt10;
+                    }
+                }
+
+            }
+        }
+    }
+    .content {
+        p, label {
+            @include font-size( 21 );
+            line-height: 2rem;
+        }
+        .btn {
+            display: block;
+            width: 150px;
+            margin: 0 auto 30px;
+            @include font-size( 21 );
+            color: $secondary;
+            background: transparent;
+            text-transform: uppercase;
+            border: 2px solid $secondarylgt10;
+            @include border-radius( 35px );
+            transition: all 0.5s ease-out;
+            &:hover {
+                color: $white;
+                background: $secondarylgt10;
+                @include border-radius( 0 );
+            }
+        }
+        form.wpcf7-form {
+            input[type="text"], input[type="email"], select, textarea {
+                width: 100%;
+                margin: 0 0 15px;
+                padding: 5px 10px;
+                outline: none;
+                border: 1px solid $white;
+                @include border-radius( 5px );
+                transition: all 0.3s ease-in-out;
+                &:focus {
+                    box-shadow: 0 0 5px $secondary;
+                    border: 1px solid $secondarylgt15;
+                }
+            }
+            select {
+                /* height: 30px; */
+                line-height: 30px;
+            }
+            textarea {
+                resize: vertical;
+            }
+            label {
+                color: $white;
+            }
+        }
+        /* attachment.php comments form */
+        .full-photo, .comments {
+            width: 100%;
+            height: auto;
+            margin: 0 0 30px;
+        }
+        .comments {
+            h3 {
+                font-family: $tangerine;
+                @include font-size( 36 );
+                color: $secondary;
+                margin-top: 0;
+                letter-spacing: 0.2rem;
+            }
+            nav {
+                margin-bottom: 30px;
+                a {
+                    display: inline-block;
+                    float: left;
+                    @include font-size( 15 );
+                    color: $secondary;
+                    background: transparent;
+                    text-transform: uppercase;
+                    transition: all 0.5s ease-out;
+                    &:last-of-type {
+                        float: right;
+                        text-align: right;
+                    }
+                    &:hover {
+                        color: $secondarylgt15;
+                    }
+                }
+            }
+            > ol {
+                box-shadow: 0 5px 10px rgba( 0, 0, 40, .08 );
+            }
+            ol {
+                margin-bottom: 30px;
+                .comment-body {
+                    padding: 2px 15px 15px;
+                    p {
+                        @include font-size( 21 );
+                        line-height: 2rem;
+                        margin: 10px 0;
+                    }
+                    .vcard {
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid $secondary;
+                        .avatar {
+                            display: none;
+                        }
+                        cite, span {
+                            @include font-size( 16 );
+                            color: #666;
+                        }
+                    }
+                    .commentmetadata {
+                        a {
+                            @include font-size( 16 );
+                            color: #999;
+                            text-decoration: none;
+                        }
+                    }
+                    .reply {
+                        a {
+                            display: block;
+                            width: 70px;
+                            @include font-size( 21 );
+                            color: $secondary;
+                            background: transparent;
+                            padding: 6px 12px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            border: 2px solid $secondarylgt10;
+                            @include border-radius( 35px );
+                            transition: all 0.5s ease-out;
+                            &:hover {
+                                color: $white;
+                                background: $secondarylgt10;
+                                @include border-radius( 0 );
+                            }
+
+                        }
+                    }
+                }
+            }
+            .comment-respond {
+                h3 {
+                    a {
+                        font-family: $tangerine;
+                        font-size: inherit;
+                        color: $secondary;
+                        text-decoration: none;
+                    }
+                    small {
+                        a {
+                            font-family: inherit;
+                            float: right;
+                            @include font-size( 16 );
+                            color: #999;
+                            line-height: 2.4rem;
+                            letter-spacing: initial;
+                            transition: all 0.5s ease-out;
+                            &:hover {
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+                .must-log-in {
+                    a {
+                        font-size: inherit;
+                        color: $secondary;
+                    }
+                }
+                .comment-form {
+                    padding: 2px 15px 15px;
+                    box-shadow: 0 0 8px rgba( 0, 0, 40, .08 );
+                    .logged-in-as {
+                        margin: 0;
+                        a {
+                            @include font-size( 16 );
+                            color: #999;
+                            text-decoration: none;
+                        }
+                    }
+                    .comment-notes {
+                        @include font-size( 16 );
+                        color: #999;
+                        margin: 0;
+                        span {
+                            @include font-size( 16 );
+                        }
+                    }
+                    .comment-form-comment {
+                        label {
+                            display: block;
+                            @include font-size( 16 );
+                            color: #666;
+                            border-bottom: 1px solid $secondary;
+                        }
+                        textarea {
+                            width: 100%;
+                            background: rgba( 244, 146, 159, 0.04 );
+                            padding: 2px 5px 5px;
+                            resize: vertical;
+                            border: 0;
+                        }
+                    }
+                    .comment-form-author, .comment-form-email, .comment-form-url {
+                        label {
+                            width: 100%;
+                            @include font-size( 16 );
+                            color: #666;
+                            border-bottom: 1px solid $secondary;
+                            span {
+                                @include font-size( 16 );
+                                color: #666;
+                            }
+                        }
+                        input {
+                            width: 100%;
+                            background: rgba( 244, 146, 159, 0.04 );
+                            padding: 2px 5px 5px;
+                            border: 0;
+                        }
+                    }
+                    .form-submit {
+                        margin: 0;
+                        input[type="submit"] {
+                            display: inline-block;
+                            width: 150px;
+                            @include font-size( 21 );
+                            color: $secondary;
+                            background: transparent;
+                            padding: 6px 12px;
+                            text-transform: uppercase;
+                            border: 2px solid $secondarylgt10;
+                            @include border-radius( 35px );
+                            transition: all 0.5s ease-out;
+                            &:hover {
+                                color: $white;
+                                background: $secondarylgt10;
+                                @include border-radius( 0 );
+                            }
+
+                        }
+                    }
+                }
+            }
+            .depth-2 {
+                .comment-body {
+                    padding: 2px 15px 15px 30px;
+                }
+            }
+            .depth-3 {
+                .comment-body {
+                    padding: 2px 15px 15px 45px;
+                }
+            }
+        } // ol
+    }
+    &.intro, &.outro {
+        h2, h3, h5, i {
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            font-family: $tangerine;
+            @include font-size( 96 );
+            padding: 30px 0;
+            color: #666;
+            -webkit-transform: rotate( -20deg );
+            transform: rotate( -20deg );
+            letter-spacing: 0.075rem;
+        }
+        h3 {
+            @include font-size( 24 );
+            font-weight: $bold;
+            color: #333;
+            letter-spacing: 0.2rem;
+        }
+        h5 {
+            @include font-size( 18 );
+            color: #666;
+            text-transform: uppercase;
+        }
+        i {
+            color: #999;
+        }
+    } // intro, outro
+
+    &.intro {
+        text-align: center;
+        h2 {
+            display: block;
+            width: 140px;
+            margin: 0 auto;
+        }
+    }
+
+    &.outro {
+        padding: 30px 0;
+        overflow: hidden;
+    }
+
+    &.thehappycouple {
+        .content {
+            img {
+                display: block;
+                width: 150px;
+                height: auto;
+                margin: 0 auto 15px;
+                @include border-radius( 50% );
+            }
+            h3 {
+                @include font-size( 42 );
+                font-family: $tangerine;
+                color: $secondary;
+            }
+            .groom, .bride {
+                text-align: center;
+                ul {
+                    display: inline-block;
+                    li {
+                        float: left;
+                    }
+
+                    &:first-of-type {
+                        li {
+                            i {
+                                width: 12px;
+                                color: #666;
+                            }
+                            span {
+                                display: inline-block;
+                                @include font-size( 16 );
+                                width: 50px;
+                                color: #666;
+                                text-transform: uppercase;
+                            }
+                            &:first-of-type, &:last-of-type {
+                                i {
+                                    @include font-size( 10 );
+                                    color: #999;
+                                }
+                            }
+                            &:nth-child( even ) {
+                                i {
+                                    @include font-size( 16 );
+                                }
+                            }
+                        }
+                    }
+
+                    &:last-of-type {
+                        li {
+                            margin-right: 6px;
+                            a {
+                                display: block;
+                                i {
+                                    width: 30px;
+                                    height: 30px;
+                                    color: #999;
+                                    @include font-size( 18 );
+                                    background: #D6D6D6;
+                                    line-height: 30px;
+                                    @include border-radius( 50% );
+                                    transition: all 0.5s ease-out;
+                                }
+                                &:hover {
+                                    i {
+                                        color: $white;
+                                        background: $secondarylgt10;
+                                    }
+                                }
+                            }
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } // thehappycouple
+
+    &.ceremony {
+        #countdown {
+            margin: 0 auto;
+            p {
+                display: inline-block;
+                width: 110px;
+                font-family: $tangerine;
+                @include font-size( 36 );
+                color: $white;
+                text-align: center;
+                span {
+                    display: block;
+                    height: 60px;
+                    font-family: $tangerine;
+                    @include font-size( 160 );
+                    text-shadow: 0 0 12px $white;
+                }
+            }
+        }
+        .church, .reception, .evening {
+            margin: 0 0 30px;
+            padding: 15px;
+            text-align: center;
+            color: $white;
+            @include border-radius( 3px );
+            border: 1px solid $white;
+            h3 {
+                font-family: $tangerine;
+                @include font-size( 42 );
+                margin-top: 0;
+                color: $white;
+            }
+            h5 {
+                @include font-size( 16 );
+                line-height: 1.5rem;
+            }
+            p {
+                padding-top: 10px;
+                @include font-size( 21 );
+                line-height: 2rem;
+                border-top: 1px solid $white25;
+            }
+        }
+    } // ceremony
+
+    // directions page
+    &.directions {
+        .church, .reception {
+            color: $black;
+            background: $white;
+            box-shadow: 0 0 8px rgba( 0, 0, 40, .08 );
+            h3 {
+                color: $secondary;
+            }
+            h5, p {
+                color: #333;
+            }
+            #church-map, #reception-map {
+                width: 100%;
+                height: 400px;
+                margin-bottom: 15px;
+            }
+            .directions-form {
+                input[type="text"] {
+                    float: left;
+                    width: 53%;
+                    margin: 0 2% 15px 0;
+                    padding: 5px 10px;
+                    outline: none;
+                    border: 1px solid $secondary;
+                    @include border-radius( 5px );
+                    transition: all 0.3s ease-in-out;
+                    &:focus {
+                        box-shadow: 0 0 5px $secondary;
+                        border: 1px solid $secondarylgt15;
+                    }
+                }
+                input[type="submit"] {
+                    float: left;
+                    width: 45%;
+                }
+            }
+            .direction-results {
+
+            }
+            .btn {
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &.photogallery {
+        .galleryphoto {
+            display: table; /* fixes 1px right bug */
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgba( 0, 0, 40, 0.08 );
+            a, div {
+                width: 100%;
+                height: 100%;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                div {
+                    display: table;
+                    background-color: $white;
+                    transition: all 0.5s ease-in;
+                    p {
+                        display: table-cell;
+                        font-family: $tangerine;
+                        @include font-size( 48 );
+                        color: $white;
+                        text-align: center;
+                        vertical-align: middle;
+                        text-shadow: 0 2px 4px rgba( 0, 0, 100, 0.25 );
+                        opacity: 0;
+                        cursor: pointer;
+                        transition: all 0.5s ease-in;
+                        &.mobile-gradient {
+                            background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(240,99,118,0.9) 100%);
+                            background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(240,99,118,0.9) 100%);
+                            background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(240,99,118,0.9) 100%);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#e6f06376',GradientType=0 );
+                            opacity: 1;
+                        }
+                    }
+                }
+                &:hover {
+                    div {
+                        background-color: $black50;
+                        p {
+                            background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(240,99,118,0.9) 100%);
+                            background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(240,99,118,0.9) 100%);
+                            background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(240,99,118,0.9) 100%);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#e6f06376',GradientType=0 );
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+
+        }
+        .caption {
+            text-align: center;
+            margin-bottom: 10px;
+            ul {
+                display: inline-block;
+                li {
+                    float: left;
+                    i {
+                        width: 12px;
+                        color: #666;
+                    }
+                    span {
+                        display: inline-block;
+                        @include font-size( 16 );
+                        color: #666;
+                        margin: 0 7px 0 5px;
+                        text-transform: uppercase;
+                    }
+                    &:first-of-type, &:last-of-type {
+                        i {
+                            @include font-size( 10 );
+                            color: $secondarylgt15;
+                        }
+                    }
+                    &:nth-child( even ) {
+                        i {
+                            @include font-size( 16 );
+                            color: $secondarylgt10;
+                        }
+                    }
+                }
+            }
+        }
+    } // photogallery
+
+    &.ourstory {
+        .content {
+            .bookmark {
+                position: relative;
+                padding-bottom: 30px;
+                h3 {
+                    @include font-size( 42 );
+                    font-family: $tangerine;
+                    color: $secondary;
+                }
+                ul {
+                    display: inline-block;
+                    li {
+                        float: left;
+                    }
+
+                    &:first-of-type {
+                        li {
+                            i {
+                                width: 12px;
+                                color: #666;
+                            }
+                            span {
+                                display: inline-block;
+                                @include font-size( 16 );
+                                color: #666;
+                                margin: 0 7px 0 5px;
+                                text-transform: uppercase;
+                            }
+                            &:first-of-type, &:last-of-type {
+                                i {
+                                    @include font-size( 10 );
+                                    color: #999;
+                                }
+                            }
+                            &:nth-child( even ) {
+                                i {
+                                    @include font-size( 16 );
+                                }
+                            }
+                        }
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include border-radius( 50% );
+                }
+                .join {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 2px;
+                    height: 100px;
+                    margin-left: -1px;
+                    background: $secondary;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &.people {
+        .content {
+            .groomsman, .bridesmaid {
+                padding: 15px 0;
+                margin-bottom: 30px;
+                background: $white25;
+                h3 {
+                    @include font-size( 42 );
+                    font-family: $tangerine;
+                    color: $secondary;
+                }
+                ul {
+                    display: inline-block;
+                    li {
+                        float: left;
+                    }
+
+                    &:first-of-type {
+                        li {
+                            i {
+                                width: 12px;
+                                color: #666;
+                            }
+                            span {
+                                display: inline-block;
+                                @include font-size( 16 );
+                                margin: 0 7px 0 5px;
+                                color: #666;
+                                text-transform: uppercase;
+                            }
+                            &:first-of-type, &:last-of-type {
+                                i {
+                                    @include font-size( 10 );
+                                    color: #999;
+                                }
+                            }
+                            &:nth-child( even ) {
+                                i {
+                                    @include font-size( 16 );
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    color: $white;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include border-radius( 50% );
+                }
+            }
+            .groomsman {
+                margin-right: 15px;
+            }
+            .bridesmaid {
+                margin-left: 15px;
+                text-align: right;
+            }
+        }
+    }
+
+    &.friends {
+        .wish {
+            background: $white;
+            margin: 0 0 15px;
+            padding: 15px 15px 5px;
+            box-shadow: 0 0 8px rgba( 0, 0, 40, 0.08 );
+            ul {
+                display: inline-block;
+                margin: 0;
+                li {
+                    float: left;
+                }
+
+                &:first-of-type {
+                    li {
+                        i {
+                            width: 12px;
+                            color: #666;
+                        }
+                        span {
+                            display: inline-block;
+                            @include font-size( 16 );
+                            margin: 0 7px 0 5px;
+                            color: #666;
+                            text-transform: uppercase;
+                        }
+                        &:first-of-type, &:last-of-type {
+                            i {
+                                @include font-size( 10 );
+                                color: $secondarylgt15;
+                            }
+                        }
+                        &:nth-child( even ) {
+                            i {
+                                @include font-size( 16 );
+                                color: $secondarylgt10;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                margin: 0 0 5px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $secondary;
+            }
+        }
+    }
+} // article
+
+/* -- CH06 - Footer -- */
+
+footer {
+    background: $secondary;
+    .content {
+        padding-top: 10px;
+        p {
+            @include font-size( 15 );
+            line-height: 30px;
+            text-align: right;
+            color: $white;
+            a {
+                font-size: inherit;
+                color: $white;
+            }
+        }
+        ul {
+            float: left;
+            display: inline-block;
+            li {
+                float: left;
+                margin-right: 6px;
+                a {
+                    display: block;
+                    i {
+                        width: 30px;
+                        height: 30px;
+                        color: $white;
+                        @include font-size( 18 );
+                        background: $secondarylgt10;
+                        line-height: 30px;
+                        text-align: center;
+                        @include border-radius( 50% );
+                        transition: all 0.5s ease-out;
+                    }
+                    &:hover {
+                        i {
+                            color: $secondary;
+                            background: $white;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* -- CH07 - Miscellaneous -- */
+
+.image-background {
+    .headings {
+        h2 {
+            color: $white;
+        }
+        ul {
+            li {
+                i {
+                    color: $white;
+                }
+                &:first-of-type, &:last-of-type {
+                    i {
+                        color: $white85;
+                    }
+                }
+                &:nth-child( even ) {
+                    i {
+                        color: $white90;
+                    }
+                }
+            }
+        }
+        p {
+            color: $white;
+        }
+    }
+}
+
+.pagination {
+    display: block;
+    text-align: center;
+    .page-numbers {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        @include font-size( 21 );
+        line-height: 26px;
+        color: $secondary;
+        text-transform: uppercase;
+        border: 2px solid $secondarylgt10;
+        @include border-radius( 50% );
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+
+        &.next, &.prev {
+            width: 100px;
+            border-radius: 15px;
+        }
+    }
+    a.page-numbers:hover {
+        color: $white;
+        background: $secondarylgt10;
+        @include border-radius( 0 );
+    }
+}
+
+/* -- CH08 - Responsive Breakpoints -- */
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    article {
+        &.people {
+            .content {
+                .groomsman {
+                    margin-right: 0;
+                }
+                .bridesmaid {
+                    margin-left: 0;
+                }
+            }
+        }
+    } //article
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+    article {
+        &.directions {
+            .church, .reception {
+                .directions-form {
+                    input[type="text"], input[type="submit"] {
+                        float: none;
+                        width: 200px;
+                        margin: 0 auto 5px;
+                    }
+                }
+            }
+        }
+    } //article
+
+}
+
+@media only screen and (max-width: 410px) {
+
+    header {
+        nav {
+            ul {
+                li {
+                    a {
+                        @include font-size( 16 );
+                    }
+                }
+            }
+        }
+    } //header
+
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+}
