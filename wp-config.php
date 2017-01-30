@@ -30,19 +30,20 @@ if ( $_SERVER[ 'SERVER_NAME' ] === "wedding.dev") {
 	define('WP_DEBUG', true);
 
 } else {
-	/*
-	define('DB_NAME', 'wedding');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
+
+	define('DB_NAME', 'robandla_wpdb');
+	define('DB_USER', 'robandla_admin');
+	define('DB_PASSWORD', '8wupIOK%=MD#_VH');
 	define('DB_HOST', 'localhost');
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
 	define('WP_HOME','http://www.robandlauraswedding.co.uk/');
     define('WP_SITEURL','http://www.robandlauraswedding.co.uk/');
 	define('WP_DEBUG', false);
-	*/
 
 }
+
+/* ]iP%vC?e07X! */
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
