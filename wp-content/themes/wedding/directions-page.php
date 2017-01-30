@@ -46,7 +46,7 @@
 
                                     <div id="church-directions-panel" class="directon-results"></div>
 
-                                    <a class="btn" href="https://www.google.co.uk/maps/place/Beeston+Manor+Events+Venue/@53.744941,-2.604158,17z/data=!3m1!4b1!4m5!3m4!1s0x487b7483b0b3419f:0x6d50208700baf14d!8m2!3d53.744941!4d-2.601964" title="Open in Google Maps" target="_blank">Open in Google Maps</a>
+                                    <a class="btn" href="https://www.google.co.uk/maps/place/St+Joseph+Roman+Catholic+Church/@53.6614937,-2.6251339,17z/data=!3m1!4b1!4m5!3m4!1s0x487b0c6090a47a19:0x644a97d09a66dced!8m2!3d53.6614937!4d-2.6229399" title="Open in Google Maps" target="_blank">Open in Google Maps</a>
                                 </div>
                             </div>
 
@@ -67,7 +67,7 @@
 
                                     <div id="reception-directions-panel" class="directon-results"></div>
 
-                                    <a class="btn" href="https://www.google.co.uk/maps/place/St+Joseph+Roman+Catholic+Church/@53.6614937,-2.6251339,17z/data=!3m1!4b1!4m5!3m4!1s0x487b0c6090a47a19:0x644a97d09a66dced!8m2!3d53.6614937!4d-2.6229399" title="Open in Google Maps" target="_blank">Open in Google Maps</a>
+                                    <a class="btn" href="https://www.google.co.uk/maps/place/Beeston+Manor+Events+Venue/@53.744941,-2.604158,17z/data=!3m1!4b1!4m5!3m4!1s0x487b7483b0b3419f:0x6d50208700baf14d!8m2!3d53.744941!4d-2.601964" title="Open in Google Maps" target="_blank">Open in Google Maps</a>
                                 </div>
                             </div>
                         </div>

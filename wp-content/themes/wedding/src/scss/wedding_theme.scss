@@ -903,6 +903,18 @@ article {
             }
         }
     }
+
+    &.four-oh-four, &.thank-you {
+        .content {
+            text-align: center;
+            a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+
 } // article
 
 /* -- CH06 - Footer -- */

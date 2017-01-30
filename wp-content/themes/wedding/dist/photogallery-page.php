@@ -54,7 +54,7 @@
                                 $image_url = wp_get_attachment_url();
                                 $excerpt = get_the_excerpt();
                                 $charcount = strlen( $excerpt );
-                                if( $charcount > 50 ) :
+                                if( $charcount > 30 ) :
                                     $caption = substr( $excerpt, 0, 30 ) . '&hellip;';
                                 else:
                                     $caption = $excerpt;

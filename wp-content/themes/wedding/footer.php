@@ -5,6 +5,7 @@
     $twitter = get_option( 'twitter_url' );
     $instagram = get_option( 'instagram_url' );
     $pinterest = get_option( 'pinterest_url' );
+    $analytics = get_option( 'analytics' );
 ?>
 
 <footer role="contentinfo" class="container-fluid">
@@ -53,6 +54,12 @@
     <!-- Directions Stylesheet -->
     <link rel='stylesheet' href='http://wedding.dev/wp-content/themes/wedding/dist/css/directions.css' type='text/css' media='all' />
 <?php endif; ?>
+
+<?php
+    if( $analytics ) :
+        echo $analytics;
+    endif;
+?>
 
 </body>
 </html>

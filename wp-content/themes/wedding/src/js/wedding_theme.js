@@ -50,6 +50,7 @@ jQuery( document ).ready( function( $ ) {
     if( $( 'html' ).hasClass( 'touchevents' ) ) {
 		$( '.galleryphoto a div' ).css( 'background-color', '#939598' );
 		$( '.galleryphoto a div p' ).addClass( 'mobile-gradient' );
+		
 		/*
         $( '.sub-menu' ).hide();
         $( '.nav ul li a' ).removeClass( 'clicked' );

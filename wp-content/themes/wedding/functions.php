@@ -32,7 +32,7 @@ function theme_js() {
     wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array( 'jquery', 'jquery_ui' ), '', false );
 
     if( is_page( 42 ) ) :
-        wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAK1INW49hrjbB4vPm1WKZ3JW46DAHtSnY&sensor=false&extension=.js', '', '', true );
+        wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDCZWYpl9LmnGh1Ldl48T6Rwkv8vB-NgMM&sensor=false&extension=.js', '', '', true );
         //wp_enqueue_script( 'contactmap', get_template_directory_uri() . '/dist/js/contactmap.js', array( 'googlemaps' ), '', true );
     endif;
 
