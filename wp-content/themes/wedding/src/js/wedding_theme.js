@@ -50,7 +50,7 @@ jQuery( document ).ready( function( $ ) {
     if( $( 'html' ).hasClass( 'touchevents' ) ) {
 		$( '.galleryphoto a div' ).css( 'background-color', '#939598' );
 		$( '.galleryphoto a div p' ).addClass( 'mobile-gradient' );
-		
+
 		/*
         $( '.sub-menu' ).hide();
         $( '.nav ul li a' ).removeClass( 'clicked' );
@@ -437,7 +437,7 @@ if( $( '.map-container' ).length ) {
 		var churchMap = new google.maps.Map( churchMapElement, churchMapOptions );
 		var receptionMap = new google.maps.Map( receptionMapElement, receptionMapOptions );
 
-		var markerIcon = new google.maps.MarkerImage( 'http://wedding.dev/wp-content/themes/wedding/dist/img/map-marker.png' );
+		var markerIcon = new google.maps.MarkerImage( 'http://www.robandlauraswedding.co.uk/wp-content/themes/wedding/dist/img/map-marker.png' );
 
 		var churchMarker = new google.maps.Marker({
 			position: churchDestination,

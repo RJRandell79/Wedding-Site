@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <p>If you have left a message, check back soon and see if your message has been added on to the website.</p>
-                                <p>If you have left a general query, w;&rsquo;ll get back to you as soon as possible.</p>
+                                <p>If you have left a general query, we;&rsquo;ll get back to you as soon as possible.</p>
                                 <p>Please click <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'title' ); ?>">here</a> to return to the homepage.</p>
                             </div>
                         </div>
