@@ -132,7 +132,7 @@ if( $( '.map-container' ).length ) {
 			style: google.maps.ZoomControlStyle.SMALL,
 		},
 		disableDoubleClickZoom: true,
-		mapTypeControl: true,
+		mapTypeControl: false,
 		mapTypeControlOptions: {
 			style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
 		},
