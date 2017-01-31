@@ -51,7 +51,7 @@ jQuery( document ).ready( function( $ ) {
 		$( '.galleryphoto a div' ).css( 'background-color', '#939598' );
 		$( '.galleryphoto a div p' ).addClass( 'mobile-gradient' );
 
-		$( '.directions-form' ).css( 'display', 'none' );
+		//$( '.directions-form' ).css( 'display', 'none' );
 
 		/*
         $( '.sub-menu' ).hide();
@@ -256,7 +256,7 @@ if( $( '.map-container' ).length ) {
 
 	function init() {
 
-		if( $( 'html' ).hasClass( 'no-touchevents' ) ) {
+		//if( $( 'html' ).hasClass( 'no-touchevents' ) ) {
 			var directionsService = new google.maps.DirectionsService();
 			var directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -309,7 +309,7 @@ if( $( '.map-container' ).length ) {
 				directionsDisplay.setMap( receptionMap );
 				directionsDisplay.setPanel( document.getElementById( 'reception-directions-panel' ) );
 			});
-		} //hasClass no-touchevents
+		// } //hasClass no-touchevents
 
 		var loc;
 

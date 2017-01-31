@@ -52,7 +52,7 @@
 
 <?php if( is_page( 42 ) ) : ?>
     <!-- Directions Stylesheet -->
-    <link rel='stylesheet' href='http://wedding.dev/wp-content/themes/wedding/dist/css/directions.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/dist/css/directions.css' type='text/css' media='all' />
 <?php endif; ?>
 
 <?php
