@@ -113,6 +113,14 @@ function show_current_user_attachments( $query = array() ) {
 }
 add_filter( 'ajax_query_attachments_args', 'show_current_user_attachments', 10, 1 );
 
+function filter_site_upload_size_limit( $size ) {
+    if( !current_user_can( 'administrator' ) ) {
+        $size = 1024;
+    }
+    return $size;
+}
+add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
+
 function remove_menu_pages() {
     if( !current_user_can( 'administrator' ) ) {
         remove_menu_page( 'edit.php?post_type=people' );

@@ -51,6 +51,8 @@ jQuery( document ).ready( function( $ ) {
 		$( '.galleryphoto a div' ).css( 'background-color', '#939598' );
 		$( '.galleryphoto a div p' ).addClass( 'mobile-gradient' );
 
+		$( '.directions-form' ).css( 'display', 'none' );
+
 		/*
         $( '.sub-menu' ).hide();
         $( '.nav ul li a' ).removeClass( 'clicked' );
@@ -126,50 +128,52 @@ if( $( '.map-container' ).length ) {
 
 	function init() {
 
-		var directionsService = new google.maps.DirectionsService();
-		var directionsDisplay = new google.maps.DirectionsRenderer();
+		if( $( 'html' ).hasClass( 'no-touchevents' ) ) {
+			var directionsService = new google.maps.DirectionsService();
+			var directionsDisplay = new google.maps.DirectionsRenderer();
 
-		$( '#church-directions' ).submit( function( event ) {
-			event.preventDefault();
+			$( '#church-directions' ).submit( function( event ) {
+				event.preventDefault();
 
-			var from = $( '#my-church-location' ).val();
+				var from = $( '#my-church-location' ).val();
 
-			var request = {
-				origin: from,
-				destination: churchDestination,
-				travelMode: google.maps.DirectionsTravelMode.DRIVING
-			};
+				var request = {
+					origin: from,
+					destination: churchDestination,
+					travelMode: google.maps.DirectionsTravelMode.DRIVING
+				};
 
-			directionsService.route( request, function( response, status ) {
-				if( status == google.maps.DirectionsStatus.OK ) {
-					directionsDisplay.setDirections( response );
-				}
+				directionsService.route( request, function( response, status ) {
+					if( status == google.maps.DirectionsStatus.OK ) {
+						directionsDisplay.setDirections( response );
+					}
+				});
+
+				directionsDisplay.setMap( churchMap );
+				directionsDisplay.setPanel( document.getElementById( 'church-directions-panel' ) );
 			});
 
-			directionsDisplay.setMap( churchMap );
-			directionsDisplay.setPanel( document.getElementById( 'church-directions-panel' ) );
-		});
+			$( '#reception-directions' ).submit( function( event ) {
+				event.preventDefault();
 
-		$( '#reception-directions' ).submit( function( event ) {
-			event.preventDefault();
+				var from = $( '#my-reception-location' ).val();
 
-			var from = $( '#my-reception-location' ).val();
+				var request = {
+					origin: from,
+					destination: receptionDestination,
+					travelMode: google.maps.DirectionsTravelMode.DRIVING
+				};
 
-			var request = {
-				origin: from,
-				destination: receptionDestination,
-				travelMode: google.maps.DirectionsTravelMode.DRIVING
-			};
+				directionsService.route( request, function( response, status ) {
+					if( status == google.maps.DirectionsStatus.OK ) {
+						directionsDisplay.setDirections( response );
+					}
+				});
 
-			directionsService.route( request, function( response, status ) {
-				if( status == google.maps.DirectionsStatus.OK ) {
-					directionsDisplay.setDirections( response );
-				}
+				directionsDisplay.setMap( receptionMap );
+				directionsDisplay.setPanel( document.getElementById( 'reception-directions-panel' ) );
 			});
-
-			directionsDisplay.setMap( receptionMap );
-			directionsDisplay.setPanel( document.getElementById( 'reception-directions-panel' ) );
-		});
+		} //hasClass no-touchevents
 
 		var churchMapOptions = {
 			center: churchDestination,

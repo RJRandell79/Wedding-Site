@@ -1057,6 +1057,15 @@ footer {
 
 @media only screen and (max-width: 479px) {
 
+    header {
+        .header-images {
+            .logo {
+                width: 300px;
+                margin-left: -150px;
+            }
+        }
+    }
+
     article {
         &.directions {
             .church, .reception {

@@ -366,7 +366,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>* denotes required fields</p>
+                        <p>Let us know which part of the day you are wanting to attend.<br/><small>* denotes required fields.</small></p>
                     </div>
 
                     <div id="attendance-form" class="content">
@@ -708,7 +708,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>* denotes required fields</p>
+                        <p>Leave a message below, song requests are also welcome.<br/><small>* denotes required fields.</small></p>
                     </div>
 
                     <div id="message-form" class="content">
