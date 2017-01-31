@@ -125,6 +125,134 @@ if( $( '.map-container' ).length ) {
 	//var map;
 	var churchDestination = new google.maps.LatLng( 53.661496, -2.622937 );
 	var receptionDestination = new google.maps.LatLng( 53.744909, -2.601943 );
+	var mapOptions = {
+		zoom: 14,
+		zoomControl: true,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.SMALL,
+		},
+		disableDoubleClickZoom: true,
+		mapTypeControl: true,
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+		},
+		scaleControl: false,
+		scrollwheel: false,
+		panControl: false,
+		streetViewControl: false,
+		draggable : true,
+		overviewMapControl: true,
+		overviewMapControlOptions: {
+			opened: true,
+		},
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		styles:
+			[{
+				"featureType": "administrative",
+				"elementType": "labels",
+				"stylers": [{
+					"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "administrative.country",
+			"elementType": "geometry.stroke",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "administrative.province",
+			"elementType": "geometry.stroke",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "landscape",
+			"elementType": "geometry",
+			"stylers": [{
+				"visibility": "on"
+			}]
+		},
+		{
+			"featureType": "landscape.natural",
+			"elementType": "labels",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "labels.icon",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "road",
+			"elementType": "labels",
+			"stylers": [{
+				"visibility": "on"
+			},
+			{
+				"color": "#ffffff"
+			}],
+			"elementType": "labels.text.fill",
+			"stylers": [{
+				"color": "#111111"
+			}]
+		},
+		{
+			"featureType": "transit",
+			"elementType": "labels.icon",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "transit.line",
+			"elementType": "geometry",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "transit.line",
+			"elementType": "labels.text",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "transit.station.airport",
+			"elementType": "geometry",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "transit.station.airport",
+			"elementType": "labels",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		},
+		{
+			"featureType": "water",
+			"elementType": "geometry",
+			"stylers": [{
+				"color": "#FFFFFF"
+			}]
+		},
+		{
+			"featureType": "water",
+			"elementType": "labels",
+			"stylers": [{
+				"visibility": "off"
+			}]
+		}],
+	}
 
 	function init() {
 
@@ -149,6 +277,10 @@ if( $( '.map-container' ).length ) {
 					}
 				});
 
+				var churchMapElement = document.getElementById( 'church-map' );
+				var churchMap = new google.maps.Map( churchMapElement );
+				churchMap.setOptions( mapOptions );
+
 				directionsDisplay.setMap( churchMap );
 				directionsDisplay.setPanel( document.getElementById( 'church-directions-panel' ) );
 			});
@@ -170,289 +302,33 @@ if( $( '.map-container' ).length ) {
 					}
 				});
 
+				var receptionMapElement = document.getElementById( 'reception-map' );
+				var receptionMap = new google.maps.Map( receptionMapElement );
+				receptionMap.setOptions( mapOptions );
+
 				directionsDisplay.setMap( receptionMap );
 				directionsDisplay.setPanel( document.getElementById( 'reception-directions-panel' ) );
 			});
 		} //hasClass no-touchevents
 
-		var churchMapOptions = {
-			center: churchDestination,
-			zoom: 14,
-			zoomControl: true,
-			zoomControlOptions: {
-				style: google.maps.ZoomControlStyle.SMALL,
-			},
-			disableDoubleClickZoom: true,
-			mapTypeControl: true,
-			mapTypeControlOptions: {
-				style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-			},
-			scaleControl: false,
-			scrollwheel: false,
-			panControl: false,
-			streetViewControl: false,
-			draggable : true,
-			overviewMapControl: true,
-			overviewMapControlOptions: {
-				opened: true,
-			},
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			styles:
-				[{
-					"featureType": "administrative",
-					"elementType": "labels",
-					"stylers": [{
-						"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "administrative.country",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "administrative.province",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "landscape",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "on"
-				}]
-			},
-			{
-				"featureType": "landscape.natural",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-	    		"featureType": "road.highway",
-	    		"elementType": "labels.icon",
-	    		"stylers": [{
-	        		"visibility": "off"
-				}]
-	  		},
-			{
-				"featureType": "road",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "on"
-				},
-				{
-					"color": "#ffffff"
-				}],
-				"elementType": "labels.text.fill",
-				"stylers": [{
-					"color": "#111111"
-				}]
-			},
-			{
-				"featureType": "transit",
-				"elementType": "labels.icon",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.line",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.line",
-				"elementType": "labels.text",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.station.airport",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.station.airport",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "water",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#FFFFFF"
-				}]
-			},
-			{
-				"featureType": "water",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			}],
-		}
+		var loc;
 
-		var receptionMapOptions = {
-			center: receptionDestination,
-			zoom: 14,
-			zoomControl: true,
-			zoomControlOptions: {
-				style: google.maps.ZoomControlStyle.SMALL,
-			},
-			disableDoubleClickZoom: true,
-			mapTypeControl: true,
-			mapTypeControlOptions: {
-				style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-			},
-			scaleControl: false,
-			scrollwheel: false,
-			panControl: false,
-			streetViewControl: false,
-			draggable : true,
-			overviewMapControl: true,
-			overviewMapControlOptions: {
-				opened: true,
-			},
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			styles:
-				[{
-					"featureType": "administrative",
-					"elementType": "labels",
-					"stylers": [{
-						"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "administrative.country",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "administrative.province",
-				"elementType": "geometry.stroke",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "landscape",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "on"
-				}]
-			},
-			{
-				"featureType": "landscape.natural",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "road.highway",
-				"elementType": "labels.icon",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "road",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "on"
-				},
-				{
-					"color": "#ffffff"
-				}],
-				"elementType": "labels.text.fill",
-				"stylers": [{
-					"color": "#111111"
-				}]
-			},
-			{
-				"featureType": "transit",
-				"elementType": "labels.icon",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.line",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.line",
-				"elementType": "labels.text",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.station.airport",
-				"elementType": "geometry",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "transit.station.airport",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			},
-			{
-				"featureType": "water",
-				"elementType": "geometry",
-				"stylers": [{
-					"color": "#FFFFFF"
-				}]
-			},
-			{
-				"featureType": "water",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			}],
-		}
+		$( '.map-container' ).each( function( index, Element ) {
 
-		var churchMapElement = document.getElementById( 'church-map' );
-		var receptionMapElement = document.getElementById( 'reception-map' );
+			if( index == 0 ) {
+				loc = churchDestination;
+			} else {
+				loc = receptionDestination;
+			}
 
-		var churchMap = new google.maps.Map( churchMapElement, churchMapOptions );
-		var receptionMap = new google.maps.Map( receptionMapElement, receptionMapOptions );
-
-		var markerIcon = new google.maps.MarkerImage( 'http://www.robandlauraswedding.co.uk/wp-content/themes/wedding/dist/img/map-marker.png' );
-
-		var churchMarker = new google.maps.Marker({
-			position: churchDestination,
-			map: churchMap,
-			icon: markerIcon
-		});
-
-		var receptionMarker = new google.maps.Marker({
-			position: receptionDestination,
-			map: receptionMap,
-			icon: markerIcon
+			var map = new google.maps.Map( Element, mapOptions );
+			map.setCenter( loc );
+			var markerIcon = new google.maps.MarkerImage( 'http://www.robandlauraswedding.co.uk/wp-content/themes/wedding/dist/img/map-marker.png' );
+			var marker = new google.maps.Marker({
+				position: loc,
+				map: map,
+				icon: markerIcon
+			});
 		});
 
 	}
