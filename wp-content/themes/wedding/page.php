@@ -19,17 +19,20 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-
-                        <?php the_content(); ?>
-
                     </div>
+
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php the_content(); ?>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </article>
 
                 <?php endwhile; endif; ?>
-            </div>
-
-            <div class="pagination">
-                <?php html5wp_pagination(); ?>
             </div>
 
         </div>

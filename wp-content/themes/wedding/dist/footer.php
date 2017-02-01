@@ -20,7 +20,7 @@
                                 <?php if( $email || $twitter || $instagram || $pinterest ) : ?>
                                 <ul>
                                     <?php if( $email ) : ?>
-                                    <li><a target="_blank" href="mailto: <?php echo $email; ?>" title="Twitter"><i class="fa fa-envelope"></i></a></li>
+                                    <li><a target="_blank" href="mailto: <?php echo $email; ?>" title="Email"><i class="fa fa-envelope"></i></a></li>
                                     <?php endif; ?>
                                     <?php if( $twitter ) : ?>
                                     <li><a target="_blank" href="<?php echo $twitter; ?>" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <p class="copyright">&copy;2017 <a href="http://www.rjrstudios.co.uk/" target="_blank">RJR Studios</a></p>
+                                <p class="copyright">&copy;2017 <a href="http://www.rjrstudios.co.uk/" target="_blank" title="RJR Studios">RJR Studios</a></p>
                             </div>
 
                         </div>
