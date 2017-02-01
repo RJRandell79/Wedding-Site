@@ -7,7 +7,7 @@
     get_header();
 ?>
 
-<!-- This is the page.php -->
+<!-- This is the directions-page.php -->
 <section role="main" class="container-fluid">
     <div class="container">
         <div class="row">
@@ -23,7 +23,12 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Directions to our venues for the day.</p>
+
+                        <?php
+                            if( have_posts() ) : while( have_posts() ) : the_post();
+                            the_content();
+                            endwhile; endif;
+                        ?>
                     </div>
 
                     <div class="content">
