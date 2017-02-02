@@ -9004,6 +9004,12 @@ footer {
   header .header-images .logo {
     width: 300px;
     margin-left: -150px; }
+  header nav ul {
+    width: 300px;
+    height: 85px; }
+    header nav ul li {
+      float: none;
+      display: inline-block; }
   article.directions .church .directions-form input[type="text"], article.directions .church .directions-form input[type="submit"], article.directions .reception .directions-form input[type="text"], article.directions .reception .directions-form input[type="submit"] {
     float: none;
     width: 200px;

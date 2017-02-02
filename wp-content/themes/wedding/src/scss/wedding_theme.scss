@@ -1126,6 +1126,16 @@ footer {
                 margin-left: -150px;
             }
         }
+        nav {
+            ul {
+                width: 300px;
+                height: 85px;
+                li {
+                    float: none;
+                    display: inline-block;
+                }
+            }
+        }
     }
 
     article {
