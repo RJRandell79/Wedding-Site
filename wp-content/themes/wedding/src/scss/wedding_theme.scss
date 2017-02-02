@@ -139,6 +139,11 @@ article {
             margin: 0 auto 30px;
             @include font-size( 21 );
             line-height: 2rem;
+            span.sub {
+                @include font-size( 42 );
+                font-family: $tangerine;
+                color: $secondary;
+            }
         }
         ul {
             display: inline-block;
@@ -904,6 +909,58 @@ article {
         }
     }
 
+    &.where-to-stay {
+        .hotel {
+            background: $white;
+            margin: 0 0 15px;
+            padding: 5px 15px 15px;
+            box-shadow: 0 0 8px rgba( 0, 0, 40, 0.08 );
+            min-height: 220px;
+            ul {
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                padding: 0 0 5px;
+                border-bottom: 1px solid $secondary;
+                li {
+                    float: left;
+                    i {
+                        width: 12px;
+                        color: #666;
+                    }
+                    span {
+                        display: inline-block;
+                        @include font-size( 16 );
+                        margin: 0 7px 0 5px;
+                        color: #666;
+                        text-transform: uppercase;
+                    }
+                    &:first-of-type, &:last-of-type {
+                        i {
+                            @include font-size( 10 );
+                            color: $secondarylgt15;
+                        }
+                    }
+                    &:nth-child( even ) {
+                        i {
+                            @include font-size( 16 );
+                            color: $secondarylgt10;
+                        }
+                    }
+                }
+            }
+            p {
+                span {
+                    font-size: inherit;
+                    font-weight: $bold;
+                }
+            }
+            .btn {
+                margin: 0 auto;
+            }
+        }
+    }
+
     &.four-oh-four, &.thank-you {
         .content {
             text-align: center;
@@ -1045,6 +1102,11 @@ footer {
                 .bridesmaid {
                     margin-left: 0;
                 }
+            }
+        }
+        &.where-to-stay {
+            .hotel {
+                min-height: inherit;
             }
         }
     } //article

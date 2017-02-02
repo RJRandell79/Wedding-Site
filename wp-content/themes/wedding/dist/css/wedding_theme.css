@@ -8237,6 +8237,11 @@ article .headings {
     font-size: 21px;
     font-size: 1.3125rem;
     line-height: 2rem; }
+    article .headings p span.sub {
+      font-size: 42px;
+      font-size: 2.625rem;
+      font-family: "Tangerine", cursive;
+      color: #F06376; }
   article .headings ul {
     display: inline-block; }
     article .headings ul li {
@@ -8853,6 +8858,44 @@ article.friends .wish {
     padding-bottom: 10px;
     border-bottom: 1px solid #F06376; }
 
+article.where-to-stay .hotel {
+  background: #FFF;
+  margin: 0 0 15px;
+  padding: 5px 15px 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 40, 0.08);
+  min-height: 220px; }
+  article.where-to-stay .hotel ul {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #F06376; }
+    article.where-to-stay .hotel ul li {
+      float: left; }
+      article.where-to-stay .hotel ul li i {
+        width: 12px;
+        color: #666; }
+      article.where-to-stay .hotel ul li span {
+        display: inline-block;
+        font-size: 16px;
+        font-size: 1rem;
+        margin: 0 7px 0 5px;
+        color: #666;
+        text-transform: uppercase; }
+      article.where-to-stay .hotel ul li:first-of-type i, article.where-to-stay .hotel ul li:last-of-type i {
+        font-size: 10px;
+        font-size: 0.625rem;
+        color: #f7a9b3; }
+      article.where-to-stay .hotel ul li:nth-child(even) i {
+        font-size: 16px;
+        font-size: 1rem;
+        color: #f4929f; }
+  article.where-to-stay .hotel p span {
+    font-size: inherit;
+    font-weight: 700; }
+  article.where-to-stay .hotel .btn {
+    margin: 0 auto; }
+
 article.four-oh-four .content, article.thank-you .content {
   text-align: center; }
   article.four-oh-four .content a, article.thank-you .content a {
@@ -8953,7 +8996,9 @@ footer {
   article.people .content .groomsman {
     margin-right: 0; }
   article.people .content .bridesmaid {
-    margin-left: 0; } }
+    margin-left: 0; }
+  article.where-to-stay .hotel {
+    min-height: inherit; } }
 
 @media only screen and (max-width: 479px) {
   header .header-images .logo {

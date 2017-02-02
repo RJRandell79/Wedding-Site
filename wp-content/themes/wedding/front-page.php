@@ -31,7 +31,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet, tale facilisi interesset ei usu. Ei has ceteros lucilius, et qui liber salutandi. Mutat oratio in pro.</p>
+                        <p>He proposed, she said <span class="sub">Yes!</span></p>
                     </div>
 
                     <div class="content">
@@ -209,7 +209,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>The countdown is on&hellip;!</p>
+                        <p>We&rsquo;ve picked a date. Now, the countdown is on&hellip;!</p>
 
                         <div id="countdown">
                             <p><span class="days"></span> days</p>
@@ -301,7 +301,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet.</p>
+                        <p>A successful marriage requires falling in love many times over, with the same person.</p>
                     </div>
 
                     <div class="content">
@@ -317,8 +317,15 @@
                                     else:
                                         $caption = $attachment->post_excerpt;
                                     endif;
+
+                                    $column = 'col-md-4';
+                                    switch( count( $attachments ) ) {
+                                        case 1 : $column = 'col-md-4 col-md-offset-4';
+                                        case 2 : $column = 'col-md-6';
+                                        default : 'col-md-4';
+                                    }
                             ?>
-                            <div class="col-md-4">
+                            <div class="<?php echo $column; ?>">
                                 <div class="galleryphoto">
                                     <a href="<?php the_permalink( $attachment->ID ); ?>" title="<?php echo $attachment->post_title; ?>">
                                         <div style="background-image: url( '<?php echo $image_url; ?>' ); background-repeat: no-repeat; background-position: center center; background-blend-mode: multiply; background-size: cover;">
@@ -662,7 +669,16 @@
 
                             <?php while( $messages->have_posts() ) : $messages->the_post(); ?>
 
-                            <div class="col-md-4">
+                                <?php
+                                    $column = 'col-md-4';
+                                    switch( $messages->post_count ) {
+                                        case 1 : $column = 'col-md-4 col-md-offset-4';
+                                        case 2 : $column = 'col-md-6';
+                                        default : $column = 'col-md-4';
+                                    }
+                                ?>
+
+                            <div class="<?php echo $column; ?>">
                                 <div class="wish">
 
                                     <?php the_content(); ?>
