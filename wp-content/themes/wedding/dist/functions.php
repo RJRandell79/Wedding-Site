@@ -132,6 +132,45 @@ function remove_menu_pages() {
 add_action( 'admin_init', 'remove_menu_pages' );
 
 /* -- Custom Post Types -- */
+function register_cpt_hotels() {
+
+    $labels = array(
+        'name' => _x( 'Hotels', 'hotels' ),
+        'singular_name' => _x( 'Hotel', 'hotels' ),
+        'add_new' => _x( 'Add New', 'hotels' ),
+        'add_new_item' => _x( 'Add New Hotel', 'hotels' ),
+        'edit_item' => _x( 'Edit Hotel', 'hotels' ),
+        'new_item' => _x( 'New Hotel', 'hotels' ),
+        'view_item' => _x( 'View Hotel', 'hotels' ),
+        'search_items' => _x( 'Search Hotels', 'hotels' ),
+        'not_found' => _x( 'No hotels found', 'hotels' ),
+        'not_found_in_trash' => _x( 'No hotels found in Trash', 'hotels' ),
+        'parent_item_colon' => _x( 'Parent Hotel:', 'hotels' ),
+        'menu_name' => _x( 'Hotels', 'hotels' ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies' => array( 'post_tag', 'page-category', 'hotels' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_icon' => 'dashicons-building',
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'post'
+    );
+    register_post_type( 'hotels', $args );
+}
+add_action( 'init', 'register_cpt_hotels' );
+
 function register_cpt_people() {
 
     $labels = array(
@@ -278,6 +317,12 @@ function international_number_link( $number ) { // Adds international dialling p
     $int_link = 'tel:+44' . $str;
 
     return $int_link;
+}
+
+function calc_driving_time( $distance ) {
+    $dist = floatval( $distance );
+    $time = ceil( ( $dist * 3 ) - ( $dist * 2 ) );
+    return $time;
 }
 
 function convert_to_numeric( $str ) { // Remove grammar from numeric figures and convert to float value

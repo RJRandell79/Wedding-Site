@@ -47,7 +47,16 @@
 
                             <?php while( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
-                            <div class="col-md-4">
+                            <?php
+                                $column = 'col-md-4';
+                                switch( $wp_query->post_count ) {
+                                    case 1 : $column = 'col-md-4 col-md-offset-4';
+                                    case 2 : $column = 'col-md-6';
+                                    default : $column = 'col-md-4';
+                                }
+                            ?>
+
+                            <div class="<?php echo $column; ?>">
                                 <div class="wish">
 
                                     <?php the_content(); ?>

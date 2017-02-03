@@ -954,6 +954,11 @@ article {
                     font-size: inherit;
                     font-weight: $bold;
                 }
+                a {
+                    font-size: inherit;
+                    color: inherit;
+                    text-decoration: none;
+                }
             }
             .btn {
                 margin: 0 auto;
@@ -1083,6 +1088,18 @@ footer {
 }
 
 /* -- CH08 - Responsive Breakpoints -- */
+@media only screen and (min-width: 992px) {
+
+    article {
+        &.ceremony {
+            .church, .reception, .evening {
+                min-height: 370px;
+            }
+        }
+    }
+
+}
+
 @media only screen and (max-width: 991px) {
 
 }
@@ -1101,6 +1118,7 @@ footer {
                 }
                 .bridesmaid {
                     margin-left: 0;
+                    text-align: left;
                 }
             }
         }
@@ -1127,9 +1145,9 @@ footer {
             }
         }
         nav {
+            height: 85px;
             ul {
                 width: 300px;
-                height: 85px;
                 li {
                     float: none;
                     display: inline-block;

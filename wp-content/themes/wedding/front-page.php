@@ -16,7 +16,7 @@
 
                 <article class="intro">
                     <h2>Hello!</h2>
-                    <h3>December 2nd 2017, Chorley, England</h3>
+                    <h3>December 2nd 2017, Chorley, Lancashire</h3>
                     <h5>&ndash; St. Joseph&rsquo;s Roman Catholic Church &ndash;</h5>
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </article>
@@ -230,7 +230,7 @@
                                     <h5>December 2nd 2017, 12:00pm</h5>
                                     <h5>St. Joseph&rsquo;s RC Church,<br/>Harpers Lane, Chorley</h5>
 
-                                    <p>An ius nostrud electram principes, nec in stet ocurreret, vis causae expetendis referrentur ut. Utinam laudem saperet mea te, justo vitae consequat ex duo, ad nusquam insolens eum. No alienum denique sadipscing mel, eum mentitum menandri no. Choro inciderint ea his. Dicta iuvaret ad eos. At eum meis veniam, oratio nemore civibus vim cu.</p>
+                                    <p>St Joseph&rsquo;s Roman Catholic Church is a local church with a friendly and inviting congregation. The church was originally opened in 1910 is situated on Harpers Lane, Chorley, Lancashire. The Parish Priest, Canon Peter G Stanley welcomes all.</p>
 
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                                     <h5>December 2nd 2017, 3:00pm</h5>
                                     <h5>Beeston Manor,<br/>Hoghton</h5>
 
-                                    <p>An ius nostrud electram principes, nec in stet ocurreret, vis causae expetendis referrentur ut. Utinam laudem saperet mea te, justo vitae consequat ex duo, ad nusquam insolens eum. No alienum denique sadipscing mel, eum mentitum menandri no. Choro inciderint ea his. Dicta iuvaret ad eos. At eum meis veniam, oratio nemore civibus vim cu.</p>
+                                    <p>Beeston Manor is a family run and owned venue set in 140 acres of land at Hoghton near Preston. The venue is a beautifully converted 16th Century barn complete with oak beams and sandstone walls. The restaurant and it&rsquo;s two function rooms have backdrop views of stunning panoramic views. The venue is also close to the M6, M61 and M65 motorway networks.</p>
 
                                 </div>
                             </div>
@@ -472,9 +472,9 @@
 
                             </div>
 
-                            <?php if( $i !== $x ) : ?>
+                            <?php //if( $i !== $x ) : ?>
                             <!-- <div class="join"></div> -->
-                            <?php endif; ?>
+                            <?php //endif; ?>
                         </div>
 
                         <?php
@@ -506,7 +506,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet.</p>
+                        <p>Our guests that will form the wedding party.</p>
                     </div>
 
                     <div class="content">
@@ -661,7 +661,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet.</p>
+                        <p>Friends sending good vibes.</p>
                     </div>
 
                     <div class="content">
