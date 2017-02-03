@@ -123,6 +123,7 @@ add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
 
 function remove_menu_pages() {
     if( !current_user_can( 'administrator' ) ) {
+        remove_menu_page( 'edit.php?post_type=hotels' );
         remove_menu_page( 'edit.php?post_type=people' );
         remove_menu_page( 'edit.php?post_type=messages' );
         remove_menu_page( 'edit.php?post_type=story' );

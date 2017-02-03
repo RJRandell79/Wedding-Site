@@ -19,7 +19,8 @@
                     $hotel_args = array(
                         'post_type' => 'hotels',
                         'posts_per_page' => -1,
-                        'orderby' => 'date',
+                        'meta_key' => 'hotel_distance',
+                        'orderby' => 'meta_value',
                         'order' => 'ASC',
                     );
                     $hotels = new WP_Query( $hotel_args );

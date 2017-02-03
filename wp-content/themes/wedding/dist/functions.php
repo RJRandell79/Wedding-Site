@@ -123,6 +123,7 @@ add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
 
 function remove_menu_pages() {
     if( !current_user_can( 'administrator' ) ) {
+        remove_menu_page( 'edit.php?post_type=hotels' );
         remove_menu_page( 'edit.php?post_type=people' );
         remove_menu_page( 'edit.php?post_type=messages' );
         remove_menu_page( 'edit.php?post_type=story' );
@@ -317,12 +318,6 @@ function international_number_link( $number ) { // Adds international dialling p
     $int_link = 'tel:+44' . $str;
 
     return $int_link;
-}
-
-function calc_driving_time( $distance ) {
-    $dist = floatval( $distance );
-    $time = ceil( ( $dist * 3 ) - ( $dist * 2 ) );
-    return $time;
 }
 
 function convert_to_numeric( $str ) { // Remove grammar from numeric figures and convert to float value
