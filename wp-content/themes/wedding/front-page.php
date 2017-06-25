@@ -230,7 +230,7 @@
                                     <h5>December 2nd 2017, 12:00pm</h5>
                                     <h5>St. Joseph&rsquo;s RC Church,<br/>Harpers Lane, Chorley</h5>
 
-                                    <p>St Joseph&rsquo;s Roman Catholic Church is a local church with a friendly and inviting congregation. The church was originally opened in 1910 is situated on Harpers Lane, Chorley, Lancashire. The Parish Priest, Canon Peter G Stanley welcomes all.</p>
+                                    <p>St Joseph&rsquo;s Roman Catholic Church is a local church with a friendly and inviting congregation. The church was originally opened in 1910 is situated on Harpers Lane, Chorley, Lancashire. The Parish Priest, Canon Peter G Stanley welcomes all. Please arrive by 11.45am.</p>
 
                                 </div>
                             </div>
@@ -253,10 +253,10 @@
                                     <h3>Evening</h3>
 
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    <h5>December 2nd 2017, 8:00pm</h5>
+                                    <h5>December 2nd 2017, 7:00pm</h5>
                                     <h5>Beeston Manor,<br/>Hoghton</h5>
 
-                                    <p>An ius nostrud electram principes, nec in stet ocurreret, vis causae expetendis referrentur ut. Utinam laudem saperet mea te, justo vitae consequat ex duo, ad nusquam insolens eum. No alienum denique sadipscing mel, eum mentitum menandri no. Choro inciderint ea his. Dicta iuvaret ad eos. At eum meis veniam, oratio nemore civibus vim cu.</p>
+                                    <p>Time to let your hair down and celebrate. Join us for the evening reception for food, drink and dancing. Put on your dancing shoes, we&rsquo;ll put on some cool tunes and there will be cake&hellip; lots of cake!</p>
 
                                 </div>
                             </div>
@@ -358,6 +358,7 @@
 
 <?php endif; ?>
 
+<!--
 <section class="container-fluid image-background" style="background-color: #333; <?php if( $bg_image_2 ) : echo 'background-image: url( ' . $bg_image_2 . ' ) no-repeat center center; background-size: cover;'; endif; ?>">
     <div class="container">
         <div class="row">
@@ -384,7 +385,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="container-fluid">
     <div class="container">
