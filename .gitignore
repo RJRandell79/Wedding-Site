@@ -91,6 +91,8 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
+cgi-bin/
+
 # ignore these plugins
 wp-content/plugins/hello.php
 
