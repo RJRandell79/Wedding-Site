@@ -358,7 +358,7 @@
 
 <?php endif; ?>
 
-<!--
+
 <section class="container-fluid image-background" style="background-color: #333; <?php if( $bg_image_2 ) : echo 'background-image: url( ' . $bg_image_2 . ' ) no-repeat center center; background-size: cover;'; endif; ?>">
     <div class="container">
         <div class="row">
@@ -366,7 +366,7 @@
 
                 <article class="attendance">
                     <div class="headings">
-                        <h2>Are you attending?</h2>
+                        <h2>Gift List</h2>
                         <ul>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -374,18 +374,20 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Let us know which part of the day you are wanting to attend.<br/><small>* denotes required fields.</small></p>
+                        <p>We have a gift list</p>
                     </div>
 
+                    <!--
                     <div id="attendance-form" class="content">
                         <?php echo do_shortcode( '[contact-form-7 id="10" title="Attendance Form"]' ); ?>
                     </div>
+                  -->
                 </article>
 
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 <section class="container-fluid">
     <div class="container">
@@ -438,7 +440,7 @@
                             <div class="row">
 
                                 <?php if( $i % 2 == 0 ) : ?>
-                                <div class="col-md-5">
+                                <div class="col-sm-5">
                                     <h3><?php the_title(); ?></h3>
                                     <ul>
                                         <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -452,12 +454,12 @@
                                 </div>
                                 <?php endif; ?>
 
-                                <div class="col-md-2 <?php if( $i % 2 != 0 ) : echo 'col-md-offset-5'; endif; ?>">
+                                <div class="col-sm-2 <?php if( $i % 2 != 0 ) : echo 'col-sm-offset-5'; endif; ?>">
                                     <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>" />
                                 </div>
 
                                 <?php if( $i % 2 != 0 ) : ?>
-                                <div class="col-md-5">
+                                <div class="col-sm-5">
                                     <h3><?php the_title(); ?></h3>
                                     <ul>
                                         <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -544,10 +546,10 @@
 
                                 <div class="row">
                                     <div class="clearfix groomsman">
-                                        <div class="col-sm-4">
+                                        <div class="col-xs-4">
                                             <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>, <?php echo $terms[ 0 ]->name; ?>" />
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-xs-8">
                                             <h3><?php the_title(); ?></h3>
                                             <ul>
                                                 <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -602,7 +604,7 @@
 
                                 <div class="row">
                                     <div class="clearfix bridesmaid">
-                                        <div class="col-sm-8">
+                                        <div class="col-xs-8">
                                             <h3><?php the_title(); ?></h3>
                                             <ul>
                                                 <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -615,7 +617,7 @@
                                             <?php the_content(); ?>
                                         </div>
 
-                                        <div class="col-sm-4">
+                                        <div class="col-xs-4">
                                             <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>, <?php echo $terms[ 0 ]->name; ?>" />
                                         </div>
                                     </div>

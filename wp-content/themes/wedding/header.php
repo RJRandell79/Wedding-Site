@@ -41,7 +41,7 @@
     <body <?php body_class(); ?> >
 
         <header>
-            <div class="header-images" style="background: url( <?php echo get_template_directory_uri() . '/dist/img/header-placeholder-image.jpg'; ?> ) no-repeat center top; background-size: cover;">
+            <div class="header-images" style="background: url( <?php echo get_template_directory_uri() . '/dist/img/IMG_0194.jpg'; ?> ) no-repeat center 45%; background-size: cover;">
                 <img class="logo" src="<?php echo get_template_directory_uri() . '/dist/svg/rl-logo.svg'; ?>" alt="Rob and Laura's Wedding" />
 
                 <div class="scroll-down">
