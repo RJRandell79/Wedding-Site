@@ -39,7 +39,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet.</p>
+                        <p>Friends sending good vibes.</p>
                     </div>
 
                     <div class="content">
