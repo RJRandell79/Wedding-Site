@@ -39,7 +39,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Ei mel malis audiam. Eos persius labores intellegam ne, pri id option imperdiet.</p>
+                        <p>Friends sending good vibes.</p>
                     </div>
 
                     <div class="content">
@@ -82,6 +82,33 @@
             <div class="pagination">
                 <?php html5wp_pagination(); ?>
             </div>
+
+            <?php else : ?>
+
+            <div class="col-md-12">
+
+                <article class="friends">
+                    <div class="headings">
+                        <h2>Friends&rsquo; Wishes</h2>
+                        <ul>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart fa-heartbeating" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+                        </ul>
+                        <p>Friends sending good vibes.</p>
+                    </div>
+
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-center">There are no messages yet to show here yet!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
 
             <?php endif; ?>
 

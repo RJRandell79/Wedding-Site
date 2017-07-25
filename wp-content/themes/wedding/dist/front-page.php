@@ -230,7 +230,7 @@
                                     <h5>December 2nd 2017, 12:00pm</h5>
                                     <h5>St. Joseph&rsquo;s RC Church,<br/>Harpers Lane, Chorley</h5>
 
-                                    <p>St Joseph&rsquo;s Roman Catholic Church is a local church with a friendly and inviting congregation. The church was originally opened in 1910 is situated on Harpers Lane, Chorley, Lancashire. The Parish Priest, Canon Peter G Stanley welcomes all.</p>
+                                    <p>St Joseph&rsquo;s Roman Catholic Church is a local church with a friendly and inviting congregation. The church was originally opened in 1910 is situated on Harpers Lane, Chorley, Lancashire. The Parish Priest, Canon Peter G Stanley welcomes all. Please arrive by 11.45am.</p>
 
                                 </div>
                             </div>
@@ -253,10 +253,10 @@
                                     <h3>Evening</h3>
 
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    <h5>December 2nd 2017, 8:00pm</h5>
+                                    <h5>December 2nd 2017, 7:00pm</h5>
                                     <h5>Beeston Manor,<br/>Hoghton</h5>
 
-                                    <p>An ius nostrud electram principes, nec in stet ocurreret, vis causae expetendis referrentur ut. Utinam laudem saperet mea te, justo vitae consequat ex duo, ad nusquam insolens eum. No alienum denique sadipscing mel, eum mentitum menandri no. Choro inciderint ea his. Dicta iuvaret ad eos. At eum meis veniam, oratio nemore civibus vim cu.</p>
+                                    <p>Time to let your hair down and celebrate. Join us for the evening reception for food, drink and dancing. Put on your dancing shoes, we&rsquo;ll put on some cool tunes and there will be cake&hellip; lots of cake!</p>
 
                                 </div>
                             </div>
@@ -358,6 +358,7 @@
 
 <?php endif; ?>
 
+
 <section class="container-fluid image-background" style="background-color: #333; <?php if( $bg_image_2 ) : echo 'background-image: url( ' . $bg_image_2 . ' ) no-repeat center center; background-size: cover;'; endif; ?>">
     <div class="container">
         <div class="row">
@@ -365,7 +366,7 @@
 
                 <article class="attendance">
                     <div class="headings">
-                        <h2>Are you attending?</h2>
+                        <h2>Gift List</h2>
                         <ul>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -373,12 +374,14 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>Let us know which part of the day you are wanting to attend.<br/><small>* denotes required fields.</small></p>
+                        <p>We have a gift list</p>
                     </div>
 
+                    <!--
                     <div id="attendance-form" class="content">
                         <?php echo do_shortcode( '[contact-form-7 id="10" title="Attendance Form"]' ); ?>
                     </div>
+                  -->
                 </article>
 
             </div>
@@ -437,7 +440,7 @@
                             <div class="row">
 
                                 <?php if( $i % 2 == 0 ) : ?>
-                                <div class="col-md-5">
+                                <div class="col-sm-5">
                                     <h3><?php the_title(); ?></h3>
                                     <ul>
                                         <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -451,12 +454,12 @@
                                 </div>
                                 <?php endif; ?>
 
-                                <div class="col-md-2 <?php if( $i % 2 != 0 ) : echo 'col-md-offset-5'; endif; ?>">
+                                <div class="col-sm-2 <?php if( $i % 2 != 0 ) : echo 'col-sm-offset-5'; endif; ?>">
                                     <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>" />
                                 </div>
 
                                 <?php if( $i % 2 != 0 ) : ?>
-                                <div class="col-md-5">
+                                <div class="col-sm-5">
                                     <h3><?php the_title(); ?></h3>
                                     <ul>
                                         <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -543,10 +546,10 @@
 
                                 <div class="row">
                                     <div class="clearfix groomsman">
-                                        <div class="col-sm-4">
+                                        <div class="col-xs-4">
                                             <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>, <?php echo $terms[ 0 ]->name; ?>" />
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-xs-8">
                                             <h3><?php the_title(); ?></h3>
                                             <ul>
                                                 <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -601,7 +604,7 @@
 
                                 <div class="row">
                                     <div class="clearfix bridesmaid">
-                                        <div class="col-sm-8">
+                                        <div class="col-xs-8">
                                             <h3><?php the_title(); ?></h3>
                                             <ul>
                                                 <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -614,7 +617,7 @@
                                             <?php the_content(); ?>
                                         </div>
 
-                                        <div class="col-sm-4">
+                                        <div class="col-xs-4">
                                             <img src="<?php if ( $thumbnail_id ) : echo $thumbnail_url[ 0 ]; else: echo $thumbnail_url; endif; ?>" alt="<?php the_title(); ?>, <?php echo $terms[ 0 ]->name; ?>" />
                                         </div>
                                     </div>
