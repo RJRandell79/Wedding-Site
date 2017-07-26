@@ -374,7 +374,7 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>We have a gift list</p>
+                        <p>We have a gift list which will be added here soon.</p>
                     </div>
 
                     <!--
