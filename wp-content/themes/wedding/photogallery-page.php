@@ -20,7 +20,7 @@
                     'posts_per_page' => 12,
                     'post_status' => 'any',
                     'orderby' => 'date',
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'exclude' => get_post_thumbnail_id(),
                     'paged' => $paged
                 );
