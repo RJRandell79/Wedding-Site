@@ -114,6 +114,12 @@ header {
                 &:last-of-type {
                     margin-right: 0;
                 }
+                &.current-menu-item {
+                    a {
+                        color: $secondary;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
         &.fixtop {

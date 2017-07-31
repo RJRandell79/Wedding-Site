@@ -8218,6 +8218,9 @@ header nav {
         color: #f7a9b3; }
       header nav ul li:last-of-type {
         margin-right: 0; }
+      header nav ul li.current-menu-item a {
+        color: #F06376;
+        text-decoration: underline; }
   header nav.fixtop {
     position: fixed;
     top: 0;
