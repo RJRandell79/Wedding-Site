@@ -58,8 +58,15 @@
 <?php
     if( $analytics ) :
         echo $analytics;
-    endif;
 ?>
+
+    <script type="text/javascript">
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        ga( 'send', 'event', 'Contact Form', 'submit' );
+    }, false );
+    </script>
+
+<?php endif; ?>
 
 </body>
 </html>
