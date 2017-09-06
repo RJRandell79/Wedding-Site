@@ -374,12 +374,12 @@
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
                         </ul>
-                        <p>We have a gift list which will be added here soon.</p>
+                        <p>We are delighted that you want to share in the celebrations with us and gifts are not necessary. If you would like to give us a gift, we have a small number of items on a gift list at John Lewis. Alternatively, we would welcome some money to help furnish our new home or as spending money for our honeymoon to Mexico.</p>
                     </div>
 
                     <!--
                     <div id="attendance-form" class="content">
-                        <?php echo do_shortcode( '[contact-form-7 id="10" title="Attendance Form"]' ); ?>
+                        <?php //echo do_shortcode( '[contact-form-7 id="10" title="Attendance Form"]' ); ?>
                     </div>
                   -->
                 </article>
