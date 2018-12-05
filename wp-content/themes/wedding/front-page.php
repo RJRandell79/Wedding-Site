@@ -712,34 +712,6 @@
 
 <?php endif; wp_reset_query(); ?>
 
-<section class="container-fluid image-background" style="background-color: #222; <?php if( $bg_image_4 ) : echo 'background-image: url( ' . $bg_image_4 . ' ) no-repeat center center; background-size: cover;'; endif; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <article class="messages">
-                    <div class="headings">
-                        <h2>Leave a message</h2>
-                        <ul>
-                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-heart fa-heartbeating" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
-                        </ul>
-                        <p>Leave a message below, song requests are also welcome.<br/><small>* denotes required fields.</small></p>
-                    </div>
-
-                    <div id="message-form" class="content">
-                        <?php echo do_shortcode( '[contact-form-7 id="9" title="Message Form"]' ); ?>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="container-fluid">
     <div class="container">
         <div class="row">
